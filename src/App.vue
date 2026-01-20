@@ -10,7 +10,7 @@
           class="input"
           placeholder="Authorization token"
         />
-        <p class="hint">Введите код перед оформлением заказа.</p>
+        <p class="hint">Enter your login code before checkout.</p>
       </div>
 
       <div class="panel panel--compactR">
@@ -58,7 +58,7 @@
           </div>
           <button class="button" @click="addToCart(product.name)">Add</button>
         </div>
-        <div v-if="!products.length" class="empty">Нет товаров</div>
+        <div v-if="!products.length" class="empty">No products</div>
       </div>
     </section>
 
@@ -88,7 +88,7 @@
           <span class="cart__price">{{ formatPrice(row.total) }}</span>
           <button class="button button--ghost" @click="removeItem(row.name)">Remove</button>
         </div>
-        <div v-if="!cartRows.length" class="empty">Корзина пуста</div>
+        <div v-if="!cartRows.length" class="empty">Cart is empty</div>
       </div>
       <div class="checkout">
         <div class="summary">Total: {{ formatPrice(cartSum) }}</div>
@@ -207,7 +207,7 @@ const formatPrice = (value) => {
 const register = async () => {
   registerStatus.value = "";
   if (!registerForm.value.name || !registerForm.value.email) {
-    registerStatus.value = "Введите имя и e-mail.";
+    registerStatus.value = "Enter name and E-Mail.";
     return;
   }
   try {
@@ -228,7 +228,7 @@ const register = async () => {
       console.error(error);
     }
     if (typeof raw === "string" && raw.trim().startsWith("<")) {
-      statusMessage = "Ошибка сервера при регистрации.";
+      statusMessage = "Server error on registration.";
     }
     if (!response.ok || statusMessage === "EMail already in use!") {
       registerStatus.value = statusMessage;
@@ -245,11 +245,11 @@ const register = async () => {
 const checkout = async () => {
   checkoutStatus.value = "";
   if (!loginCode.value) {
-    checkoutStatus.value = "Введите код входа перед оплатой.";
+    checkoutStatus.value = "Enter your login code before checkout.";
     return;
   }
   if (!cartRows.value.length) {
-    checkoutStatus.value = "Корзина пуста.";
+    checkoutStatus.value = "Cart is empty.";
     return;
   }
 
@@ -277,7 +277,7 @@ const checkout = async () => {
     }
   } catch (error) {
     console.error(error);
-    checkoutStatus.value = "Ошибка оформления заказа.";
+    checkoutStatus.value = "Error when placing an order.";
   }
 };
 
