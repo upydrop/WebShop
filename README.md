@@ -1,16 +1,16 @@
 🍃 TeaShop
 
-Full-stack web application for frontend<->backend interaction practice
+Full-stack web application for frontend<->backend interaction practice<br/>
 REST API, MongoDB, Java, Vue
 
-🎯 Why I Built This Project
-  Understand core full-stack concepts on a lightweight project
+🎯 Why I Built This Project<br/>
+  Understand core full-stack concepts on a lightweight project<br/>
   Refactor existing CLI project and scale it to the web
 
-🛠 Tech Stack
-  Frontend: HTML, CSS, JavaScript, Vue
-  Backend: Java, REST API
-  Database: MongoDB
+🛠 Tech Stack<br/>
+  Frontend: HTML, CSS, JavaScript, Vue<br/>
+  Backend: Java, REST API<br/>
+  Database: MongoDB<br/>
 
 Login logic:
   1. After registering the user receives a special login code
