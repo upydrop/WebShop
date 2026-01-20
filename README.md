@@ -15,3 +15,5 @@ REST API, MongoDB, Java, Vue
 Login logic:
   1. After registering the user receives a special login code
   2. Upon checking out, the user types it into the designated area
+     
+<img width="1085" height="1025" alt="image" src="https://github.com/user-attachments/assets/a0df409c-38ca-46e4-b65c-087b665f2deb" />
