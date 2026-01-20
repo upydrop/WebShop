@@ -9,7 +9,7 @@ public class DataController {
     private final MongoCollection<Document> productsDB;
 
     public DataController(){
-        String connectionString = "mongodb+srv://valerijss:Valerarul1@cluster0.2tk53v8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+        String connectionString = "<Connection link to MongoDB>";
         MongoClient mongoClient = MongoClients.create(connectionString);
         MongoDatabase database = mongoClient.getDatabase("ZaShop");
         this.productsDB = database.getCollection("products");
@@ -39,4 +39,5 @@ public class DataController {
             productsDB.updateOne(filter, update);
         }
     }
+
 }
