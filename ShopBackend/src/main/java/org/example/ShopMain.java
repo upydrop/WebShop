@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder;
 
 import static spark.Spark.*;
 
-public class ZaShop {
+public class Shop {
     public static void main(String[] args) {
         ShopController shopController = new ShopController();
         DataController dataController = new DataController();
@@ -138,4 +138,5 @@ public class ZaShop {
             }
         });*/
     }
+
 }
