@@ -11,7 +11,7 @@ public class ClientDataController {
     private ArrayList<Client> clients;
 
     public ClientDataController(){
-        String connectionString = "mongodb+srv://valerijss:Valerarul1@cluster0.2tk53v8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+        String connectionString = "<connection link to MongoDB>";
         MongoClient mongoClient = MongoClients.create(connectionString);
         MongoDatabase database = mongoClient.getDatabase("ZaShop");
         this.clientsDB = database.getCollection("clients");
@@ -52,3 +52,4 @@ public class ClientDataController {
                 .orElse(null);
     }
 }
+
